@@ -1,337 +1,407 @@
 // Course Data
 const courseData = {
-    description: "The emergence of foundation models has revolutionized AI applications, but the most powerful AI systems today are increasingly compound systems—compositions of multiple models, retrievers, tools, and traditional software components. This research seminar explores the <b>intersection of cloud computing infrastructure and compound AI systems</b>, covering both the infrastructure required to build and deploy these systems at scale and the architectural patterns that make them effective.",
-    
+    description: `
+  <p><strong>What this is:</strong> CS 524 “AI for Science,” a graduate seminar on how modern AI accelerates discovery—protein structures, materials, climate, plasma control, and formal mathematics—via a small set of recurring ideas: multi-scale modeling, multi-modal architectures, differentiable simulation, search-augmented reasoning, and data valuation.</p>
+  <p><strong>Format:</strong> Each week pairs a classical milestone (e.g., AlphaFold or AlphaGo→MuZero) with a recent advance (e.g., FourCastNet, Earth-2/CorrDiff, Evo/IgLM, AlphaTensor→AlphaEvolve). You will read, present, critique, and ship a scoped research project.</p>
+  <p><strong>Prereqs:</strong> CS229 or CS230 (or equivalent ML); Python proficiency; familiarity with PyTorch or JAX. <strong>Recommended:</strong> CS224W/CS246 (graphs); CS224N for language-heavy topics; numerical methods and linear algebra.</p>
+  <p><strong>Positioning:</strong> AI first, illuminated by scientific case studies. Expect a dash of systems (tooling, infrastructure, reliability) and a pinch of economics (compute budgets, incentives). We surface model-theoretic limits of frontier methods and ask how tool shape directs inquiry.</p>
+  <h4>Learning Objectives</h4>
+  <ul>
+      <li>Spot architectural patterns (multi-scale, multi-modal, graph-structured, search-augmented) behind state-of-the-art systems.</li>
+      <li>Evaluate research for rigor, novelty, reproducibility, and scientific impact—against credible baselines and ablations.</li>
+      <li>Implement and stress-test reference baselines on scientific datasets.</li>
+      <li>Design and present a focused project with a clear question, method, evaluation plan, and reproducibility checklist.</li>
+      <li>Articulate limits and trade-offs: model-theoretic constraints, failure modes, and compute/economic budgets.</li>
+      <li>Decompose ambitious goals into testable sub-problems with measurable counterfactual value.</li>
+  </ul>
+  <p class="light">The syllabus below is canonical for Autumn 2025.</p>
+`,
+
     courseInfo: [
         {
             icon: "people",
             label: "Instructors:",
-            value: "Christos Kozyrakis, Jared Quincy Davis"
+            value: "Jure Leskovec; Jared Quincy Davis"
         },
         {
-            icon: "people",
-            label: "TA:",
-            value: "Caleb Winston"
+            icon: "email",
+            label: "Instructor Contact:",
+            value: "Jared Quincy Davis — <a href=\"mailto:jaredq@cs.stanford.edu\">jaredq@cs.stanford.edu</a>; Jure Leskovec — <a href=\"mailto:jure@cs.stanford.edu\">jure@cs.stanford.edu</a>"
+        },
+        {
+            icon: "event",
+            label: "Quarter:",
+            value: "Instruction: Sep 22 - Dec 5, 2025; Finals: Dec 8 - 12; Quarter ends: Dec 12"
         },
         {
             icon: "schedule",
-            label: "",
-            value: "Spring 2025, Wed/Fri 10:30 AM - 11:20 PM"
+            label: "Meeting Pattern:",
+            value: "Wed & Fri 10:30-11:50 a.m. PT"
         },
         {
             icon: "place",
-            label: "",
-            value: "THORNT 110"
+            label: "Location:",
+            value: "Littlefield 107"
+        },
+        {
+            icon: "school",
+            label: "Units:",
+            value: "3 units (Letter or CR/NC)"
+        },
+        {
+            icon: "category",
+            label: "Course Component:",
+            value: "Seminar (discussion + light replication demos)"
+        },
+        {
+            icon: "groups",
+            label: "Modality:",
+            value: "In-person"
+        },
+        {
+            icon: "apps",
+            label: "Tools:",
+            value: "Canvas, Gradescope, Ed or Piazza for Q&A"
+        },
+        {
+            icon: "email",
+            label: "TA Contact:",
+            value: "Yanay — <a href=\"mailto:yanay@stanford.edu\">yanay@stanford.edu</a>"
         }
     ],
-    
+
     modules: [
         {
-            id: 1,
-            name: "Foundations and Infrastructure",
+            id: "A",
+            name: "Foundations (Weeks 1-3)",
             weeks: [
                 {
                     number: 1,
-                    dates: "Apr 1-5",
-                    topic: "Introduction to Compound AI Systems",
+                    dates: "Sep 24 & Sep 26",
+                    topic: "Landscape, expectations, AlphaFold and FourCastNet exemplars",
                     readings: {
                         required: [
-                            "The Shift from Models to Compound AI Systems (Zaharia et al.)",
-                            "OpenAI o1 system card and blog post"
+                            "Wed Sep 24: Course overview; AI in Science landscape; Anima Anandkumar (Caltech AI+Science Lab) fireside 10:30-11:30 a.m.",
+                            "Fri Sep 26: AlphaFold impact and FourCastNet weather case; Remi Lam (Google DeepMind) — final date confirmations pending."
                         ],
                         additional: [
-                            "Are more LLM calls all you need? (Chen et al.)",
-                            "Networks of Networks: Complexity Class Principles (Davis et al.)"
+                            "Opening survey and background round robin; prompts on ambitious scientific goals"
                         ]
                     }
                 },
                 {
                     number: 2,
-                    dates: "Apr 8-12",
-                    topic: "Cloud Infrastructure for AI",
+                    dates: "Oct 1 & Oct 3",
+                    topic: "Multi-scale modeling, PINNs, weather foundation models",
                     readings: {
                         required: [
-                            "Twine: A Unified Cluster Management System for Shared Infrastructure",
-                            "Ray: A Distributed Framework for Emerging AI Applications (Moritz et al.)"
+                            "Wed Oct 1: Physics-informed neural networks and MuMMI multiscale workflows",
+                            "Fri Oct 3: FourCastNet vs GraphCast comparison; guest slot — final date confirmations pending."
                         ],
                         additional: [
-                            "Resource Central: Understanding and Predicting Workloads"
+                            "Lightning kickoffs (ungraded, 2 x 6 minute volunteer talks each day)"
                         ]
                     }
-                }
-            ]
-        },
-        {
-            id: 2,
-            name: "Model Serving and Inference",
-            weeks: [
+                },
                 {
                     number: 3,
-                    dates: "Apr 15-19",
-                    topic: "LLM Serving and Inference",
-                    milestone: "Project Proposal Due",
+                    dates: "Oct 8 & Oct 10",
+                    topic: "Graph-structured learning, AlphaFold vs OpenFold debate",
                     readings: {
                         required: [
-                            "AlpaServe: Statistical Multiplexing with Model Parallelism"
+                            "Wed Oct 8: Message passing neural networks; AlphaFold as graph reasoning",
+                            "Fri Oct 10: Debate on AlphaFold vs OpenFold reproducibility and priors featuring Jiajun Wu (Stanford AI Lab) — final date confirmations pending."
                         ],
                         additional: [
-                            "Efficient Memory Management for Large Language Model Serving with PagedAttention",
-                            "DeepSpeed-FastGen: High-throughput Text Generation for LLMs"
+                            "Guardrail. No graded work released or due before Fri Oct 10, 5:00 p.m."
                         ]
                     }
-                },
+                }
+            ]
+        },
+        {
+            id: "B",
+            name: "Modalities and Simulation (Weeks 4-5)",
+            weeks: [
                 {
                     number: 4,
-                    dates: "Apr 22-26",
-                    topic: "Retrieval-Augmented Generation",
+                    dates: "Oct 15 & Oct 17",
+                    topic: "Cross-domain models and student lightning talks",
+                    milestone: "Project pitch assigned (due Fri Oct 24, 5:00 p.m.)",
                     readings: {
                         required: [
-                            "Baleen: Robust Retrieval Augmentation for LLMs"
+                            "Wed Oct 15: Gato, Evo, IgLM; Alex Wiltschko (Osmo) virtual visit 10:30-11:30 a.m.; graded lightning (Groups 01-02)",
+                            "Fri Oct 17: Graded lightning talks (Groups 03-04); modality alignment workshop."
                         ],
                         additional: [
-                            "Milvus: A Purpose-Built Vector Data Management System",
-                            "A Comprehensive Survey on Vector Database"
+                            "Prompts on compute budgets and modality alignment"
                         ]
                     }
-                }
-            ]
-        },
-        {
-            id: 3,
-            name: "Agentic Systems Architecture",
-            weeks: [
+                },
                 {
                     number: 5,
-                    dates: "Apr 29-May 3",
-                    topic: "Tool Use and Function Calling",
+                    dates: "Oct 22 & Oct 24",
+                    topic: "Differentiable simulation, CorrDiff, and tooling review",
+                    milestone: "Project pitch due Fri Oct 24, 5:00 p.m.",
                     readings: {
                         required: [
-                            "React: Synergizing Reasoning and Acting in LLMs"
+                            "Wed Oct 22: World Models, decoupled neural interfaces, Earth-2/CorrDiff; graded lightning (Groups 05-06)",
+                            "Fri Oct 24: Differentiable PDE methods discussion; graded lightning (Groups 07-08)"
                         ],
                         additional: [
-                            "ToolFormer: Language Models Can Teach Themselves to Use Tools"
+                            "Discussion: virtual cell experiment design and validation"
                         ]
                     }
-                },
+                }
+            ]
+        },
+        {
+            id: "C",
+            name: "Reasoning and Data (Weeks 6-7)",
+            weeks: [
                 {
                     number: 6,
-                    dates: "May 6-10",
-                    topic: "Agent Planning and Orchestration",
+                    dates: "Oct 29 & Oct 31",
+                    topic: "Search, reinforcement learning, and scientific exploration",
                     readings: {
                         required: [
-                            "DSPy: Compiling Declarative Language Model Calls"
+                            "Wed Oct 29: AlphaGo->AlphaZero->MuZero arc with Pushmeet Kohli (Google DeepMind) — final date confirmations pending; graded lightning (Groups 09-10)",
+                            "Fri Oct 31: AlphaTensor->AlphaEvolve with Ngan Vu (Google DeepMind) — final date confirmations pending; AlphaProof or AlphaGeometry; graded lightning (Groups 11-12)"
                         ],
                         additional: [
-                            "AutoGen: Enabling Next-Gen LLM Applications",
-                            "HuggingGPT: Solving AI Tasks with ChatGPT and its Friends"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            id: 4,
-            name: "System Optimization and Deployment",
-            weeks: [
-                {
-                    number: 7,
-                    dates: "May 13-17",
-                    topic: "Orchestration and Optimization",
-                    milestone: "Mid-term Review Due",
-                    readings: {
-                        required: [
-                            "FrugalGPT: How to Use Large Language Models While Reducing Cost",
-                            "Distilling The Knowledge in A Neural Network (Hinton et. al)"
-                        ],
-                        additional: [
-                            "Optimizing Model Selection for Compound AI Systems (Chen et al.)"
+                            "Provocation: root-node problems and search-augmented inference limits"
                         ]
                     }
                 },
                 {
-                    number: 8,
-                    dates: "May 20-24",
-                    topic: "Compound AI Systems in Production: Specifications, Evaluation",
+                    number: 7,
+                    dates: "Nov 5 & Nov 7",
+                    topic: "Curriculum design, data valuation, human-in-the-loop optimization",
+                    milestone: "Mid-term review (artifact + 3-4 page memo) due Fri Nov 7, 5:00 p.m.",
                     readings: {
                         required: [
-                            "Specifications: The Missing Link for LLM Systems Engineering"
+                            "Wed Nov 5: Curriculum learning; Data Shapley; Kexin Huang (Biomni) session 10:30-11:30 a.m.; graded lightning (Groups 13-14)",
+                            "Fri Nov 7: HIL optimization and Optometrist algorithm; graded lightning (Groups 15-16)"
                         ],
                         additional: [
-                            "LangSmith: Runtime Infrastructure for LLM Application Development",
-                            "RAGAS: Automated Evaluation of RAG"
+                            "Project check-ins and risk assessment"
                         ]
                     }
                 }
             ]
         },
         {
-            id: 5,
-            name: "Advanced Topics and Applications",
+            id: "D",
+            name: "Knowledge and Systems (Weeks 8-9)",
             weeks: [
                 {
-                    number: 9,
-                    dates: "May 27-31",
-                    topic: "Multi-Agent Systems",
+                    number: 8,
+                    dates: "Nov 12 & Nov 14",
+                    topic: "Knowledge graphs, neuro-symbolic tools, RTX-KG2 case study",
                     readings: {
                         required: [
-                            "Generative Agents: Interactive Simulacra of Human Behavior"
+                            "Wed Nov 12: TransE, neural theorem proving, RTX-KG2 case walkthrough; graded lightning (Groups 17-18)",
+                            "Fri Nov 14: KG construction and QA deep dive; graded lightning (Groups 19-20)"
                         ],
-                        additional: []
+                        additional: [
+                            "Guest hold at 11:05-11:50 a.m.; ontology and curation trade-offs"
+                        ]
+                    }
+                },
+                {
+                    number: 9,
+                    dates: "Nov 19 & Nov 21",
+                    topic: "Whole-system case studies and autonomous labs panel",
+                    readings: {
+                        required: [
+                            "Wed Nov 19: AlphaChip reproducibility discourse; overflow lightning window if needed",
+                            "Fri Nov 21: Autonomous labs and scientific workflows panel featuring Patrick Hsu (Arc Institute), Michelle Lee (Medra), and Alex Wiltschko (Osmo) — final date confirmations pending."
+                        ],
+                        additional: [
+                            "No lightning talks on Fri; prep questions for panelists; Thanksgiving recess the following week (no class Nov 26 & Nov 28)"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            id: "E",
+            name: "Symposium and Wrap (Week 10)",
+            weeks: [
+                {
+                    number: "Recess",
+                    dates: "Nov 26 & Nov 28",
+                    topic: "Thanksgiving recess -- no class meetings",
+                    readings: {
+                        required: [],
+                        additional: [
+                            "Use the week for project iteration, community contributions, and peer feedback"
+                        ]
                     }
                 },
                 {
                     number: 10,
-                    dates: "Jun 3-7",
-                    topic: "AI System Security and Trust",
+                    dates: "Dec 3 & Dec 5",
+                    topic: "Project lightning talks, synthesis, course reflections",
+                    milestone: "Project lightning talks delivered in class; last day of instruction Fri Dec 5",
                     readings: {
                         required: [
-                            "Everywhere All at Once: Co-Location Attacks on Public Cloud FaaS"
+                            "Wed Dec 3: Project lightning talks (part 1)",
+                            "Fri Dec 5: Project lightning talks (part 2), Max Jaderberg (Isomorphic Labs) fireside 10:30-11:30 a.m., and course reflections"
                         ],
                         additional: [
-                            "The Security Design of the AWS Nitro System",
-                            "Honeycomb: Secure and Efficient GPU Executions"
+                            "Final project due Fri Dec 12, 5:00 p.m. PT"
                         ]
                     }
                 }
             ]
-        },
-        {
-            id: 6,
-            name: "Project Presentations",
-            weeks: [
-                {
-                    number: 11,
-                    dates: "Jun 10-14",
-                    topic: "Project Presentations",
-                    milestone: "Project Presentations",
-                    readings: {
-                        required: [],
-                        additional: []
-                    }
-                },
-                {
-                    number: 12,
-                    dates: "Jun 17-21",
-                    topic: "Project Presentations and Course Synthesis",
-                    milestone: "Project Presentations",
-                    readings: {
-                        required: [],
-                        additional: []
-                    }
-                }
-            ]
         }
     ],
-    
-    finals: {
-        dates: "Jun 24-28",
-        milestone: "Final Report Due"
+
+    guestSpeakers: {
+        note: "Confirmed guests; schedule highlights fixed slots (Anima Anandkumar 9/24, Alex Wiltschko 10/15, Kexin Huang 11/5, Max Jaderberg 12/5). All other appearances — final date confirmations pending; updates will land on Canvas and the course calendar. Roster sorted alphabetically by last name.",
+        speakers: [
+            {
+                name: "Anima Anandkumar",
+                affiliation: "Bren Professor of Computing and Mathematical Sciences, Caltech; formerly Senior Director of AI Research, NVIDIA",
+                focus: "Neural operators and FourCastNet for multi-scale climate and scientific simulation."
+            },
+            {
+                name: "Patrick Hsu",
+                affiliation: "Co-Founder & Core Investigator, Arc Institute; Assistant Professor of Bioengineering, UC Berkeley",
+                focus: "Programmable biology, CRISPR toolchains, and AI-guided therapeutics discovery."
+            },
+            {
+                name: "Kexin Huang",
+                affiliation: "PhD Candidate, Stanford Computer Science (SAIL); Biomni generalist biomedical agents",
+                focus: "Generalist biomedical agents that automate hypothesis generation and wet-lab planning."
+            },
+            {
+                name: "Max Jaderberg",
+                affiliation: "Chief AI Officer, Isomorphic Labs",
+                focus: "Scaling AlphaFold-era playbooks into AI-native drug discovery systems."
+            },
+            {
+                name: "Pushmeet Kohli",
+                affiliation: "VP of Research, Google DeepMind",
+                focus: "Agentic AI for scientific discovery, from AlphaFold to AlphaEvolve and Co-Scientist."
+            },
+            {
+                name: "Remi Lam",
+                affiliation: "Staff Research Scientist, Google DeepMind",
+                focus: "GraphCast and diffusion-powered weather forecasting for climate resilience."
+            },
+            {
+                name: "Michelle Lee",
+                affiliation: "Founder & CEO, Medra",
+                focus: "Autonomous robotics for biotech operations and AI-native lab infrastructure."
+            },
+            {
+                name: "Ngan Vu",
+                affiliation: "Researcher, Google DeepMind (AlphaEvolve team)",
+                focus: "Evolutionary coding agents that co-design algorithms and hardware scheduling."
+            },
+            {
+                name: "Alex Wiltschko",
+                affiliation: "Founder & CEO, Osmo",
+                focus: "Olfactory intelligence and molecular search for fragrances and health diagnostics."
+            },
+            {
+                name: "Jiajun Wu",
+                affiliation: "Assistant Professor of Computer Science, Stanford",
+                focus: "Physical scene understanding, generative simulators, and embodied AI reasoning."
+            }
+        ]
     },
-    
+
+    finals: {
+        dates: "Dec 8-12",
+        milestone: "Final project (<=8 page paper + repo) due Fri Dec 12, 5:00 p.m. PT"
+    },
+
     assignments: [
         {
             number: 1,
-            title: "Paper Presentations",
+            title: "Research Project",
             content: `
-                <p>
-                    For lectures with assigned readings, students will be assigned to present the papers 
-                    and lead class discussions. The assigned student(s) will spend roughly 5 minutes 
-                    presenting the day's paper and then lead the subsequent discussion (~25 minutes). In 
-                    your presentation, cover:
-                </p>
-                <ul>
-                    <li><strong>Motivation:</strong> What is the key problem being addressed?</li>
-                    <li><strong>Key insight:</strong> What are the key insights to address the problem?</li>
-                    <li><strong>Novelty/Strengths:</strong> What is different from previous work, and why?</li>
-                    <li><strong>Critique:</strong> Is there anything you would change in the solution or evaluation?</li>
-                    <li><strong>Discussion:</strong> Prepare questions to start class discussion.</li>
+                <p>Plan and execute a quarter-long research project that combines AI methods with scientific inquiry. Teams of two to three are encouraged; solo is allowed with instructor approval.</p>
+                <ul class="project-timeline">
+                    <li><span>Project pitch (10%):</span> Fri Oct 24, 5:00 p.m. PT.</li>
+                    <li><span>Mid-term review (20%):</span> Fri Nov 7, 5:00 p.m. PT; submit artifact plus 3-4 page memo.</li>
+                    <li><span>Project lightning talk (5%):</span> Week 10 in-class slot per roster.</li>
+                    <li><span>Final report + repo (25%):</span> Fri Dec 12, 5:00 p.m. PT; <=8 pages plus reproducible code.</li>
                 </ul>
+                <p>Document data provenance, hardware, seeds, runtimes, ablations, and negative results. Coordinate compute through Stanford clusters; limited partner credits may be available.</p>
+                <p>Slip-days: shared 72-hour bank for the quarter (max 48 hours on any single deliverable). No slip-days for live talks or panel days.</p>
             `
         },
         {
             number: 2,
-            title: "Paper Summaries",
+            title: "Papers and Lightning Presentations",
             content: `
-                <p>
-                    For lectures with assigned readings, everyone must submit a summary for each paper 
-                    on Gradescope prior to the start of each class.
-                </p>
+                <p>Engage deeply with the reading list and present insights to the class.</p>
+                <ul>
+                    <li><strong>Pair lightning presentation (10%):</strong> 8 minute talk + 4 minute Q&A; upload slides by 8:30 a.m. day-of; both partners speak; rubric emphasizes delivery, technical accuracy, critique, and timing.</li>
+                    <li><strong>Reading responses (10%):</strong> Submit <=1 page per core paper via Gradescope by 10:00 a.m. on class days.</li>
+                    <li><strong>Living roster:</strong> 20 student pairs (G01-G20); overflow or make-up slots default to Wed Nov 19.</li>
+                </ul>
+                <p>Prepare discussion prompts that surface model limits, reproducibility concerns, and evaluation gaps.</p>
             `
         },
         {
             number: 3,
-            title: "Projects",
+            title: "Participation and Professionalism",
             content: `
-                <p>
-                    Students will propose and run a quarter-long project, ideally in groups of 2-3. It 
-                    is fine to use your existing research project if it is relevant to the course and 
-                    the instructor approves. Projects should combine multiple aspects of the course 
-                    (e.g., integrating infrastructure optimizations with agentic orchestration patterns) 
-                    to create compound systems.
-                </p>
-                
-                <h4>Project ideas include:</h4>
+                <p>20% of the grade recognizes consistent engagement and community contributions.</p>
                 <ul>
-                    <li>Design and implement a novel compound AI system architecture</li>
-                    <li>Build an agentic system that coordinates multiple models and tools</li>
-                    <li>Develop evaluation frameworks for measuring compound AI system performance</li>
-                    <li>Create new optimization techniques for AI system components</li>
-                    <li>Build infrastructure improvements for AI system deployment</li>
-                    <li>Research security and safety considerations for agentic systems</li>
-                    <li>Implement cross-model orchestration or tool-use frameworks</li>
-                    <li>Design edge-cloud distributed agentic systems</li>
-                </ul>
-                
-                <h4>Project timeline:</h4>
-                <ul class="project-timeline">
-                    <li><span>Project proposal:</span> Week 3 (Apr 15-19)</li>
-                    <li><span>Mid-term review:</span> Week 7 (May 13-17)</li>
-                    <li><span>Presentation:</span> Weeks 11-12 (Jun 10-21, in class)</li>
-                    <li><span>Final report:</span> Finals week (Jun 24-28)</li>
+                    <li>Attend and contribute thoughtful questions; be ready for cold-calls and peer feedback.</li>
+                    <li>Post helpful notes or issue reports on Ed or Piazza; share repro tips, datasets, or tool pointers.</li>
+                    <li>Join rolling 5 minute project check-ins starting Week 5; communicate blockers early.</li>
+                    <li>Adhere to academic integrity expectations, citing all sources, data, and code.</li>
                 </ul>
             `
         }
     ],
-    
+
     grading: [
         {
             percentage: "60%",
-            description: "<strong>Project</strong> (proposal, mid-term review, final presentation, report)"
+            description: "<strong>Research Project</strong> (pitch, mid-term review, lightning talk, final report + repo)"
         },
         {
             percentage: "20%",
-            description: "<strong>Participation</strong> in class discussions"
+            description: "<strong>Papers and Presentations</strong> (pair lightning presentation + reading responses)"
         },
         {
             percentage: "20%",
-            description: "<strong>Paper</strong> presentations and summaries"
+            description: "<strong>Participation and Professionalism</strong> (discussion readiness, community contributions, check-ins)"
         }
     ],
-    
+
     resources: [
         {
-            icon: "cloud",
-            description: "Access to cloud computing resources will be provided"
+            icon: "cast_for_education",
+            description: "Canvas hosts announcements and project logistics; Gradescope for reading responses; Ed or Piazza for Q&A and community threads."
         },
         {
-            icon: "access_time",
-            description: "Office hours: TBD"
+            icon: "event_note",
+            description: "Key dates: Instruction starts Mon Sep 22; study list deadline Fri Oct 10, 5:00 p.m.; Thanksgiving recess Nov 24-28; classes end Fri Dec 5; project due Fri Dec 12."
         },
         {
-            icon: "forum",
-            description: "Discussion site: Online discussions will take place at edstem"
+            icon: "policy",
+            description: "Guardrails: no graded work is released or due before Fri Oct 10, 5:00 p.m.; slip-days are limited to 72 hours shared across the quarter."
         },
         {
-            icon: "assignment",
-            description: "Gradescope: You will use Gradescope to submit paper summaries"
+            icon: "computer",
+            description: "Compute and software: Python with PyTorch or JAX; Stanford clusters preferred; limited partner credits (Foundry, Azure, GCP) may be available for projects."
         },
         {
-            icon: "menu_book",
-            description: "Stanford Libraries Extension: For accessing ACM Digital Library papers off-campus"
+            icon: "group",
+            description: "Student presentation roster: 20 pairs (G01-G20); upload slides by 8:30 a.m. on your slot day; overflow uses Wed Nov 19."
         },
         {
-            description: "Contact course staff at <a href='mailto:cs349d-spr2425-staff@lists.stanford.edu'>cs349d-spr2425-staff@lists.stanford.edu</a>",
-            icon: "email"
+            icon: "support_agent",
+            description: "Primary contact / TA: Yanay (<a href='mailto:yanay@stanford.edu'>yanay@stanford.edu</a>). Coordinate additional needs via Canvas office hours and OAE early in the quarter."
         }
     ]
 };

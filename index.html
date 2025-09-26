@@ -1,62 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS349D: Compound AI Systems</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CS 524 — AI for Science (Autumn 2025) | Stanford</title>
+  <meta name="description" content="CS 524 (AI for Science): graduate seminar on multi-scale modeling, multimodal architectures, differentiable simulation, search/reasoning, and data valuation. Autumn 2025." />
+  <meta property="og:title" content="CS 524 — AI for Science (Autumn 2025)" />
+  <meta property="og:description" content="Graduate seminar on AI for Science at Stanford. Instructor: Jure Leskovec; Jared Quincy Davis." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <main class="container">
-        <!-- Course Card -->
-        <section class="course-card">
-            <h2>CS349D</h2>
-            <h3>Compound AI Systems</h3>
-            <h4>Cloud Computing, Networks of Networks (NONs) and Agentic Systems Architecture</h4>
-            <div id="course-info" class="course-info"></div>
-        </section>
-        
-        <!-- Course Description -->
-        <section class="course-description">
-            <p id="course-description-text"></p>
-        </section>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <h1 class="sr-only">CS 524: AI for Science — Stanford University (Autumn 2025)</h1>
 
-        <!-- Schedule -->
-        <section id="schedule">
-            <div class="timeline">
-                <div id="timeline-track" class="timeline-track"></div>
-            </div>
-        </section>
+  <main id="main" class="container" tabindex="-1">
+    <!-- Course Card -->
+    <section class="course-card" aria-labelledby="course-title">
+      <h2 id="course-title">AI for Science</h2>
+      <h3>CS 524 | Stanford University</h3>
+      <h4>Autumn 2025 | Graduate Seminar on Scientific Discovery with AI</h4>
 
-        <!-- Assignments -->
-        <section id="assignments">
-            <h2>Assignments</h2>
-            <div id="assignments-container" class="assignments-container"></div>
-        </section>
+      <div id="course-info" class="course-info" aria-label="Course information"></div>
 
-        <!-- Grading -->
-        <section id="grading">
-            <h2>Grading</h2>
-            <div id="grading-breakdown" class="grading-breakdown"></div>
-        </section>
+      <div class="course-actions">
+        <a href="#syllabus" class="primary-link">
+          <span class="material-icons" aria-hidden="true">description</span>
+          View Course Syllabus
+        </a>
+      </div>
 
-        <!-- Resources -->
-        <section id="resources">
-            <h2>Resources</h2>
-            <ul id="resources-list" class="resources-list"></ul>
-        </section>
-    </main>
+      <nav class="course-nav" aria-label="Sections">
+        <a href="#syllabus">Syllabus</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#speakers">Guest Speakers</a>
+        <a href="#assignments">Assignments</a>
+        <a href="#grading">Grading</a>
+        <a href="#resources">Logistics</a>
+      </nav>
+    </section>
 
-    <footer>
-        <div class="container">
-            <p>© 2025 Stanford University</p>
-        </div>
-    </footer>
+    <!-- Course Description -->
+    <section id="syllabus" class="course-description" aria-labelledby="syllabus-h2">
+      <h2 id="syllabus-h2">Syllabus</h2>
+      <div id="course-description-text" class="richtext"></div>
+    </section>
 
-    <script src="data.js"></script>
-    <script src="utils.js"></script>
-    <script src="script.js"></script>
+    <!-- Schedule -->
+    <section id="schedule" aria-labelledby="schedule-h2">
+      <h2 id="schedule-h2">Schedule</h2>
+      <div class="timeline">
+        <div id="timeline-track" class="timeline-track"></div>
+      </div>
+    </section>
+
+    <!-- Guest Speakers -->
+    <section id="speakers" aria-labelledby="speakers-h2">
+      <h2 id="speakers-h2">Guest Speakers</h2>
+      <p id="guest-speakers-note" class="guest-note"></p>
+      <div id="guest-speakers-grid" class="guest-speakers-grid" role="list" aria-label="Guest speaker roster"></div>
+    </section>
+
+    <!-- Assignments -->
+    <section id="assignments" aria-labelledby="assignments-h2">
+      <h2 id="assignments-h2">Assignments</h2>
+      <div id="assignments-container" class="assignments-container"></div>
+    </section>
+
+    <!-- Grading -->
+    <section id="grading" aria-labelledby="grading-h2">
+      <h2 id="grading-h2">Grading</h2>
+      <div id="grading-breakdown" class="grading-breakdown"></div>
+    </section>
+
+    <!-- Resources -->
+    <section id="resources" aria-labelledby="resources-h2">
+      <h2 id="resources-h2">Resources</h2>
+      <ul id="resources-list" class="resources-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Stanford University</p>
+    </div>
+  </footer>
+
+  <!-- Defer everything to avoid parser blocking -->
+  <script src="data.js" defer></script>
+  <script src="utils.js" defer></script>
+  <script src="script.js" defer></script>
+
+  <!-- Structured data for rich previews -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "CS 524 — AI for Science",
+    "description": "Graduate seminar on AI for Science at Stanford focusing on multi-scale modeling, multimodal architectures, differentiable simulation, search/reasoning, and data valuation.",
+    "provider": { "@type": "CollegeOrUniversity", "name": "Stanford University" },
+    "courseCode": "CS 524",
+    "instructor": [
+      { "@type": "Person", "name": "Jure Leskovec" },
+      { "@type": "Person", "name": "Jared Quincy Davis" }
+    ],
+    "startDate": "2025-09-22", "endDate": "2025-12-05"
+  }
+  </script>
 </body>
 </html>
