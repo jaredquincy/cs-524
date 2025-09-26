@@ -5,9 +5,9 @@
 - Either Python 3 or Node.js (pick one)
 
 ## Steps
-1. Get the files (clone or unzip) and move into the folder with `index.html`.
+1. Get the files (clone or unzip) and move into the `ai-for-science` folder with `index.html`.
    ```bash
-   cd path/to/compound-ai-systems
+   cd path/to/ai-for-science
    ```
 2. Start a simple server:
    - Python: `python3 -m http.server 8000`
