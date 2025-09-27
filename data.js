@@ -12,7 +12,7 @@ const courseData = {
       <li>Implement and stress-test reference baselines on scientific datasets.</li>
       <li>Design and present a focused project with a clear question, method, evaluation plan, and reproducibility checklist.</li>
       <li>Articulate limits and trade-offs: model-theoretic constraints, failure modes, and compute/economic budgets.</li>
-      <li>Decompose ambitious goals into testable sub-problems with measurable counterfactual value.</li>
+      <li>Gain insight into how to decompose ambitious goals into tractable sub-problems with measurable counterfactual value.</li>
   </ul>
   <p class="light">The syllabus below is canonical for Autumn 2025.</p>
 `,
