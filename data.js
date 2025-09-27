@@ -31,7 +31,7 @@ const courseData = {
         {
             icon: "event",
             label: "Quarter:",
-            value: "Instruction: Sep 22 - Dec 5, 2025; Finals: Dec 8 - 12; Quarter ends: Dec 12"
+            value: "Instruction: Sep 22 – Dec 5, 2025; Finals: Dec 8 – 12, 2025; Quarter ends: Dec 12, 2025"
         },
         {
             icon: "schedule",
@@ -166,7 +166,7 @@ const courseData = {
                     readings: {
                         required: [
                             "Wed Oct 29: AlphaGo->AlphaZero->MuZero arc with Pushmeet Kohli (Google DeepMind) — final date confirmations pending; graded lightning (Groups 09-10)",
-                            "Fri Oct 31: AlphaTensor->AlphaEvolve with Ngan Vu (Google DeepMind) — final date confirmations pending; AlphaProof or AlphaGeometry; graded lightning (Groups 11-12)"
+                            "Fri Oct 31: AlphaTensor->AlphaEvolve with Ngan Vu (Google DeepMind) — final date confirmations pending; AlphaProof and AlphaGeometry 2; graded lightning (Groups 11-12)"
                         ],
                         additional: [
                             "Provocation: root-node problems and search-augmented inference limits"
@@ -273,7 +273,7 @@ const courseData = {
             },
             {
                 name: "Kexin Huang",
-                affiliation: "PhD Candidate, Stanford Computer Science (SAIL); Biomni generalist biomedical agents",
+                affiliation: "PhD student, Stanford Computer Science (SAIL); Lead author of the Biomni generalist biomedical AI agent",
                 focus: "Generalist biomedical agents that automate hypothesis generation and wet-lab planning."
             },
             {
