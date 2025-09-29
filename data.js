@@ -1,27 +1,26 @@
 // Course Data
 const courseData = {
     description: `
-  <p><strong>What this is:</strong> CS 524 “AI for Science,” a graduate seminar on how modern AI accelerates discovery—protein structures, materials, climate, plasma control, and formal mathematics—via a small set of recurring ideas: multi-scale modeling, multi-modal architectures, differentiable simulation, search-augmented reasoning, and data valuation.</p>
-  <p><strong>Format:</strong> Each week pairs a classical milestone (e.g., AlphaFold or AlphaGo → AlphaZero → MuZero) with a recent advance (e.g., FourCastNet, Earth-2/CorrDiff downscaling, Evo/IgLM, AlphaTensor → AlphaDev → AlphaEvolve). You will read, present, critique, and ship a scoped research project.</p>
+  <p><strong>What this is:</strong> A graduate seminar on AI-for-Science. We study how modern AI accelerates discovery—protein structures, materials, climate, plasma control, and formal mathematics—via a small set of recurring ideas: multi-scale modeling, multi-modal architectures, differentiable simulation, search-augmented reasoning, and data valuation.</p>
+  <p><strong>Format:</strong> Each week pairs a classical milestone (e.g., AlphaFold or AlphaGo→MuZero) with a recent advance (e.g., FourCastNet, Earth-2/CorrDiff, Evo/IgLM, AlphaTensor→AlphaEvolve). You will read, present, critique, and ship a scoped research project.</p>
   <p><strong>Prereqs:</strong> CS229 or CS230 (or equivalent ML); Python proficiency; familiarity with PyTorch or JAX. <strong>Recommended:</strong> CS224W/CS246 (graphs); CS224N for language-heavy topics; numerical methods and linear algebra.</p>
   <p><strong>Positioning:</strong> AI first, illuminated by scientific case studies. Expect a dash of systems (tooling, infrastructure, reliability) and a pinch of economics (compute budgets, incentives). We surface model-theoretic limits of frontier methods and ask how tool shape directs inquiry.</p>
   <h4>Learning Objectives</h4>
   <ul>
       <li>Spot architectural patterns (multi-scale, multi-modal, graph-structured, search-augmented) behind state-of-the-art systems.</li>
       <li>Evaluate research for rigor, novelty, reproducibility, and scientific impact—against credible baselines and ablations.</li>
-      <li>Implement and stress-test reference baselines on scientific datasets.</li>
       <li>Design and present a focused project with a clear question, method, evaluation plan, and reproducibility checklist.</li>
-      <li>Articulate limits and trade-offs: model-theoretic constraints, failure modes, and compute/economic budgets.</li>
+      <li>Articulate approach limits and trade-offs: model-theoretic constraints, failure modes, and compute/economic implications.</li>
       <li>Gain insight into how to decompose ambitious goals into tractable sub-problems with measurable counterfactual value.</li>
   </ul>
-  <p class="light">The syllabus below is canonical for Autumn 2025.</p>
+  <p class="light">Review the syllabus below for Autumn 2025.</p>
 `,
 
     courseInfo: [
         {
             icon: "people",
             label: "Instructors:",
-            value: "CS 524 · AI for Science — Jure Leskovec; Jared Quincy Davis"
+            value: "Jure Leskovec; Jared Quincy Davis"
         },
         {
             icon: "email",
@@ -31,7 +30,7 @@ const courseData = {
         {
             icon: "event",
             label: "Quarter:",
-            value: "Instruction: Sep 22 – Dec 5, 2025; Finals: Dec 8 – 12, 2025; Quarter ends: Dec 12, 2025"
+            value: "Autumn 2025 (Sep 22 - Dec 5)"
         },
         {
             icon: "schedule",
@@ -61,12 +60,12 @@ const courseData = {
         {
             icon: "apps",
             label: "Tools:",
-            value: "Canvas, Gradescope, Ed (course forum) for Q&A"
+            value: "Canvas, Gradescope, Ed or Piazza for Q&A"
         },
         {
             icon: "email",
             label: "TA Contact:",
-            value: "Teaching team via Canvas; primary contact Yanay — <a href=\"mailto:yanay@stanford.edu\">yanay@stanford.edu</a>"
+            value: "Yanay — <a href=\"mailto:yanay@stanford.edu\">yanay@stanford.edu</a>"
         }
     ],
 
@@ -78,11 +77,11 @@ const courseData = {
                 {
                     number: 1,
                     dates: "Sep 24 & Sep 26",
-                    topic: "Landscape, expectations, AlphaFold and FourCastNet exemplars",
+                    topic: "Landscape, expectations, Foundations",
                     readings: {
                         required: [
-                            "Wed Sep 24: Course overview; AI in Science landscape; Anima Anandkumar (Caltech AI+Science Lab) fireside 10:30-11:30 a.m.",
-                            "Fri Sep 26: AlphaFold impact and FourCastNet weather case; guest weather systems discussion — final date confirmations pending."
+                            "Wed Sep 24: Course overview; AI in Science landscape; Anima Anandkumar (Caltech/NVIDIA) Guest Lecture 10:30-11:30 a.m.",
+                            "Fri Sep 26: Course overview continued; Foundations Lecture on reasoning and inference-time scaling"
                         ],
                         additional: [
                             "Opening survey and background round robin; prompts on ambitious scientific goals"
@@ -92,11 +91,11 @@ const courseData = {
                 {
                     number: 2,
                     dates: "Oct 1 & Oct 3",
-                    topic: "Multi-scale modeling, PINNs, weather foundation models",
+                    topic: "Multi-scale modeling, weather foundation models",
                     readings: {
                         required: [
-                            "Wed Oct 1: Physics-informed neural networks and MuMMI multiscale workflows; Pushmeet Kohli (Google DeepMind) fireside 11:00-11:30 a.m.",
-                            "Fri Oct 3: FourCastNet (AFNO) vs GraphCast (GNN) comparison; guest slot — final date confirmations pending."
+                            "Wed Oct 1: PushMeet Kohli (DeepMind AI for Science Leader) Guest Lecture",
+                            "Fri Oct 3: Weather Models, NeuralGCM, and GPU/CPU Architecture brief"
                         ],
                         additional: [
                             "Lightning kickoffs (ungraded, 2 x 6 minute volunteer talks each day)"
@@ -106,11 +105,11 @@ const courseData = {
                 {
                     number: 3,
                     dates: "Oct 8 & Oct 10",
-                    topic: "Graph-structured learning, AlphaFold vs OpenFold debate",
+                    topic: "Graph-structured learning, AlphaFold, World Modeling",
                     readings: {
                         required: [
-                            "Wed Oct 8: Message passing neural networks; AlphaFold as graph reasoning",
-                            "Fri Oct 10: Debate on AlphaFold vs OpenFold reproducibility and priors; guest discussant — final date confirmations pending."
+                            "Wed Oct 8: Message passing neural networks; AlphaFold",
+                            "Fri Oct 10: Guest Lecture, featuring Jiajun Wu"
                         ],
                         additional: [
                             "Guardrail. No graded work released or due before Fri Oct 10, 5:00 p.m."
@@ -130,8 +129,8 @@ const courseData = {
                     milestone: "Project pitch assigned (due Fri Oct 24, 5:00 p.m.)",
                     readings: {
                         required: [
-                            "Wed Oct 15: Gato, Evo, IgLM; Alex Wiltschko (Osmo) virtual visit 10:30-11:30 a.m.; graded lightning (Groups 01-02)",
-                            "Fri Oct 17: Graded lightning talks (Groups 03-04); modality alignment workshop."
+                            "Wed Oct 15: Alex Wiltschko (Osmo) virtual visit 10:30-11:30 a.m.; graded lightning (Groups 01-02)",
+                            "Fri Oct 17: Gato, Evo, IgLM; Graded lightning talks (Groups 03-04);"
                         ],
                         additional: [
                             "Prompts on compute budgets and modality alignment"
@@ -145,8 +144,8 @@ const courseData = {
                     milestone: "Project pitch due Fri Oct 24, 5:00 p.m.",
                     readings: {
                         required: [
-                            "Wed Oct 22: World Models, decoupled neural interfaces, Earth-2/CorrDiff; graded lightning (Groups 05-06)",
-                            "Fri Oct 24: Differentiable PDE methods discussion; graded lightning (Groups 07-08)"
+                            "Wed Oct 22: World Models, decoupled neural interfaces, Earth-2/CorrDiff (Speaker Pending); graded lightning (Groups 05-06)",
+                            "Fri Oct 24: Differentiable Simulations; graded lightning (Groups 07-08)"
                         ],
                         additional: [
                             "Discussion: virtual cell experiment design and validation"
@@ -165,8 +164,8 @@ const courseData = {
                     topic: "Search, reinforcement learning, and scientific exploration",
                     readings: {
                         required: [
-                            "Wed Oct 29: AlphaGo → AlphaZero → MuZero arc; graded lightning (Groups 09-10)",
-                            "Fri Oct 31: AlphaTensor → AlphaDev → AlphaEvolve; AlphaProof and AlphaGeometry 2; graded lightning (Groups 11-12)"
+                            "Wed Oct 29: AlphaGo->AlphaZero->MuZero arc; graded lightning (Groups 09-10)",
+                            "Fri Oct 31: AlphaTensor->AlphaEvolve with Ngan Vu (Google DeepMind); AlphaProof and AlphaGeometry; graded lightning (Groups 11-12)"
                         ],
                         additional: [
                             "Provocation: root-node problems and search-augmented inference limits"
@@ -181,7 +180,7 @@ const courseData = {
                     readings: {
                         required: [
                             "Wed Nov 5: Curriculum learning; Data Shapley; Kexin Huang (Biomni) session 10:30-11:30 a.m.; graded lightning (Groups 13-14)",
-                            "Fri Nov 7: HIL optimization and Optometrist algorithm; graded lightning (Groups 15-16)"
+                            "Fri Nov 7: AI for Fusion, HIL optimization and Optometrist algorithm; graded lightning (Groups 15-16)"
                         ],
                         additional: [
                             "Project check-ins and risk assessment"
@@ -200,7 +199,7 @@ const courseData = {
                     topic: "Knowledge graphs, neuro-symbolic tools, RTX-KG2 case study",
                     readings: {
                         required: [
-                            "Wed Nov 12: TransE, neural theorem proving, RTX-KG2 case walkthrough; graded lightning (Groups 17-18)",
+                            "Wed Nov 12: TransE, neural theorem proving; graded lightning (Groups 17-18)",
                             "Fri Nov 14: KG construction and QA deep dive; graded lightning (Groups 19-20)"
                         ],
                         additional: [
@@ -211,14 +210,14 @@ const courseData = {
                 {
                     number: 9,
                     dates: "Nov 19 & Nov 21",
-                    topic: "Whole-system case studies and autonomous labs panel",
+                    topic: "Whole-system case studies and virtual labs, and virtual Cell",
                     readings: {
                         required: [
-                            "Wed Nov 19: AlphaChip reproducibility discourse; overflow lightning window if needed",
-                            "Fri Nov 21: Autonomous labs and scientific workflows panel — final date confirmations pending."
+                            "Wed Nov 19: AlphaChip; overflow lightning window if needed",
+                            "Fri Nov 21: Guest lecture by Patrick Hsu (Arc Institute)"
                         ],
                         additional: [
-                            "No lightning talks on Fri; prep questions for panelists; Thanksgiving recess next week (Nov 24–28; no class)"
+                            "No lightning talks on Fri; prep questions for panelists; Thanksgiving recess the following week (no class Nov 26 & Nov 28)"
                         ]
                     }
                 }
@@ -259,21 +258,21 @@ const courseData = {
     ],
 
     guestSpeakers: {
-        note: "Confirmed guests; schedule highlights fixed slots (Anima Anandkumar 9/24, Pushmeet Kohli 10/1, Alex Wiltschko 10/15, Kexin Huang 11/5, Max Jaderberg 12/5). All other appearances — final date confirmations pending; updates will land on Canvas and the course calendar. Roster sorted alphabetically by last name.",
+        note: "Confirmed guests; schedule highlights fixed slots (Anima Anandkumar 9/24, Alex Wiltschko 10/15, Kexin Huang 11/5, Max Jaderberg 12/5). All other appearances — final date confirmations pending; updates will land on Canvas and the course calendar.",
         speakers: [
             {
                 name: "Anima Anandkumar",
-                affiliation: "Bren Professor of Computing and Mathematical Sciences, Caltech; formerly Senior Director of AI Research, NVIDIA",
+                affiliation: "Bren Professor, Caltech; Director of ML Research, NVIDIA",
                 focus: "Neural operators and FourCastNet for multi-scale climate and scientific simulation."
             },
             {
                 name: "Patrick Hsu",
-                affiliation: "Co-Founder & Core Investigator, Arc Institute; Assistant Professor of Bioengineering, UC Berkeley",
+                affiliation: "Co-Founder & Core Investigator, Arc Institute; Assistant Professor, UC Berkeley",
                 focus: "Programmable biology, CRISPR toolchains, and AI-guided therapeutics discovery."
             },
             {
                 name: "Kexin Huang",
-                affiliation: "PhD student, Stanford Computer Science (SAIL); Lead author of the Biomni generalist biomedical AI agent",
+                affiliation: "PhD Researcher, Stanford AI Lab (Biomni)",
                 focus: "Generalist biomedical agents that automate hypothesis generation and wet-lab planning."
             },
             {
@@ -289,7 +288,7 @@ const courseData = {
             {
                 name: "Remi Lam",
                 affiliation: "Staff Research Scientist, Google DeepMind",
-                focus: "Lead author on GraphCast and diffusion-powered weather forecasting for climate resilience."
+                focus: "GraphCast and diffusion-powered weather forecasting for climate resilience."
             },
             {
                 name: "Michelle Lee",
@@ -298,7 +297,7 @@ const courseData = {
             },
             {
                 name: "Ngan Vu",
-                affiliation: "Researcher, Google DeepMind (AlphaEvolve team)",
+                affiliation: "Product & Research Lead, Google DeepMind (AlphaEvolve)",
                 focus: "Evolutionary coding agents that co-design algorithms and hardware scheduling."
             },
             {
@@ -314,9 +313,9 @@ const courseData = {
         ]
     },
 
-    finals: {
+    Final: {
         dates: "Dec 8-12",
-        milestone: "Final project window; final report (<=8 page paper + repo) due Fri Dec 12, 5:00 p.m. PT"
+        milestone: "Final project (<=8 page paper + repo) due Fri Dec 12, 5:00 p.m. PT"
     },
 
     assignments: [
@@ -331,7 +330,7 @@ const courseData = {
                     <li><span>Project lightning talk (5%):</span> Week 10 in-class slot per roster.</li>
                     <li><span>Final report + repo (25%):</span> Fri Dec 12, 5:00 p.m. PT; <=8 pages plus reproducible code.</li>
                 </ul>
-                <p>Document data provenance, hardware, seeds, runtimes, ablations, and negative results. Coordinate compute through Stanford clusters; limited partner credits may be available; details on Canvas.</p>
+                <p>Document data provenance, hardware, seeds, runtimes, ablations, and negative results. Coordinate compute through Stanford clusters; limited partner credits may be available.</p>
                 <p>Slip-days: shared 72-hour bank for the quarter (max 48 hours on any single deliverable). No slip-days for live talks or panel days.</p>
             `
         },
@@ -355,7 +354,7 @@ const courseData = {
                 <p>20% of the grade recognizes consistent engagement and community contributions.</p>
                 <ul>
                     <li>Attend and contribute thoughtful questions; be ready for cold-calls and peer feedback.</li>
-                    <li>Post helpful notes or issue reports on Ed; share repro tips, datasets, or tool pointers.</li>
+                    <li>Post helpful notes or issue reports on Ed or Piazza; share repro tips, datasets, or tool pointers.</li>
                     <li>Join rolling 5 minute project check-ins starting Week 5; communicate blockers early.</li>
                     <li>Adhere to academic integrity expectations, citing all sources, data, and code.</li>
                 </ul>
@@ -381,7 +380,7 @@ const courseData = {
     resources: [
         {
             icon: "cast_for_education",
-            description: "Canvas hosts announcements and project logistics; Gradescope for reading responses; Ed (course forum) for Q&A and community threads."
+            description: "Canvas hosts announcements and project logistics; Gradescope for reading responses; Ed or Piazza for Q&A and community threads."
         },
         {
             icon: "event_note",
@@ -393,7 +392,7 @@ const courseData = {
         },
         {
             icon: "computer",
-            description: "Compute and software: Python with PyTorch or JAX; Stanford clusters preferred; limited partner credits (Foundry, Azure, GCP) may be available; details on Canvas."
+            description: "Compute and software: Python with PyTorch or JAX; Stanford clusters preferred; limited partner credits (Foundry, Azure, GCP) may be available for projects."
         },
         {
             icon: "group",
