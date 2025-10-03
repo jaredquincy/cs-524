@@ -313,7 +313,7 @@ const courseData = {
         ]
     },
 
-    Final: {
+    finals: {
         dates: "Dec 8-12",
         milestone: "Final project (<=8 page paper + repo) due Fri Dec 12, 5:00 p.m. PT"
     },
