@@ -82,9 +82,6 @@ const courseData = {
                         required: [
                             "Wed Sep 24: Course overview; AI in Science landscape; Anima Anandkumar (Caltech/NVIDIA) Guest Lecture 10:30-11:30 a.m.",
                             "Fri Sep 26: Course overview continued; Foundations Lecture on reasoning and inference-time scaling"
-                        ],
-                        additional: [
-                            "Opening survey and background round robin; prompts on ambitious scientific goals"
                         ]
                     }
                 },
@@ -96,9 +93,6 @@ const courseData = {
                         required: [
                             "Wed Oct 1: PushMeet Kohli (DeepMind AI for Science Leader) Guest Lecture",
                             "Fri Oct 3: Weather Models, NeuralGCM, and GPU/CPU Architecture brief"
-                        ],
-                        additional: [
-                            "Lightning kickoffs (ungraded, 2 x 6 minute volunteer talks each day)"
                         ]
                     }
                 },
@@ -108,11 +102,8 @@ const courseData = {
                     topic: "Graph-structured learning, AlphaFold, World Modeling",
                     readings: {
                         required: [
-                            "Wed Oct 8: Message passing neural networks; AlphaFold",
-                            "Fri Oct 10: Guest Lecture, featuring Jiajun Wu"
-                        ],
-                        additional: [
-                            "Guardrail. No graded work released or due before Fri Oct 10, 5:00 p.m."
+                            "Wed Oct 8: Hong-Xing ''Koven'' Yu (Stanford Vision and Learning Lab) on world modeling; Message passing neural networks; AlphaFold",
+                            "Fri Oct 10: Vivek Ramavajjala (Excarta) guest lecture on Excarta and applications-driven modeling approaches"
                         ]
                     }
                 }
@@ -131,9 +122,6 @@ const courseData = {
                         required: [
                             "Wed Oct 15: Alex Wiltschko (Osmo) virtual visit 10:30-11:30 a.m.; graded lightning (Groups 01-02)",
                             "Fri Oct 17: Gato, Evo, IgLM; Graded lightning talks (Groups 03-04);"
-                        ],
-                        additional: [
-                            "Prompts on compute budgets and modality alignment"
                         ]
                     }
                 },
@@ -146,9 +134,6 @@ const courseData = {
                         required: [
                             "Wed Oct 22: World Models, decoupled neural interfaces, Earth-2/CorrDiff (Speaker Pending); graded lightning (Groups 05-06)",
                             "Fri Oct 24: Differentiable Simulations; graded lightning (Groups 07-08)"
-                        ],
-                        additional: [
-                            "Discussion: virtual cell experiment design and validation"
                         ]
                     }
                 }
@@ -166,9 +151,6 @@ const courseData = {
                         required: [
                             "Wed Oct 29: AlphaGo->AlphaZero->MuZero arc; graded lightning (Groups 09-10)",
                             "Fri Oct 31: AlphaTensor->AlphaEvolve with Ngan Vu (Google DeepMind); AlphaProof and AlphaGeometry; graded lightning (Groups 11-12)"
-                        ],
-                        additional: [
-                            "Provocation: root-node problems and search-augmented inference limits"
                         ]
                     }
                 },
@@ -181,9 +163,6 @@ const courseData = {
                         required: [
                             "Wed Nov 5: Curriculum learning; Data Shapley; Kexin Huang (Biomni) session 10:30-11:30 a.m.; graded lightning (Groups 13-14)",
                             "Fri Nov 7: AI for Fusion, HIL optimization and Optometrist algorithm; graded lightning (Groups 15-16)"
-                        ],
-                        additional: [
-                            "Project check-ins and risk assessment"
                         ]
                     }
                 }
@@ -201,9 +180,6 @@ const courseData = {
                         required: [
                             "Wed Nov 12: TransE, neural theorem proving; graded lightning (Groups 17-18)",
                             "Fri Nov 14: KG construction and QA deep dive; graded lightning (Groups 19-20)"
-                        ],
-                        additional: [
-                            "Guest hold at 11:05-11:50 a.m.; ontology and curation trade-offs"
                         ]
                     }
                 },
@@ -215,9 +191,6 @@ const courseData = {
                         required: [
                             "Wed Nov 19: AlphaChip; overflow lightning window if needed",
                             "Fri Nov 21: Guest lecture by Patrick Hsu (Arc Institute)"
-                        ],
-                        additional: [
-                            "No lightning talks on Fri; prep questions for panelists; Thanksgiving recess the following week (no class Nov 26 & Nov 28)"
                         ]
                     }
                 }
@@ -232,10 +205,7 @@ const courseData = {
                     dates: "Nov 26 & Nov 28",
                     topic: "Thanksgiving recess -- no class meetings",
                     readings: {
-                        required: [],
-                        additional: [
-                            "Use the week for project iteration, community contributions, and peer feedback"
-                        ]
+                        required: []
                     }
                 },
                 {
@@ -247,9 +217,6 @@ const courseData = {
                         required: [
                             "Wed Dec 3: Project lightning talks (part 1)",
                             "Fri Dec 5: Project lightning talks (part 2), Max Jaderberg (Isomorphic Labs) fireside 10:30-11:30 a.m., and course reflections"
-                        ],
-                        additional: [
-                            "Final project due Fri Dec 12, 5:00 p.m. PT"
                         ]
                     }
                 }
